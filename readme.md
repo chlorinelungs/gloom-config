@@ -14,8 +14,10 @@
 Using [LukeSmithxyz's](https://github.com/LukeSmithxyz/st) Build until I get everything else patched
 
 **DMenu**
-Currently Vanilla, Working on DWM at the time of writting this
-
+- Center
+- Fuzzy Highlight 
+- Fuzzy Match
+ 
 **Neofetch**
 Used custom ascii art that will be in the `ascii` folder 
 
