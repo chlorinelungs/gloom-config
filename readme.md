@@ -1,4 +1,4 @@
-### Alice's Configs
+# Alice's Configs
 ## For distro/device hopping
 
 **DWM**
