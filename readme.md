@@ -20,5 +20,5 @@ Using [LukeSmithxyz's](https://github.com/LukeSmithxyz/st) Build until I get eve
 - Border 
 
 **Neofetch**
-Used custom ascii art that will be in the `ascii` folder 
+- Cp the main file from `neofetch` and you should have nice looking ascii art you can modify easier 
 
