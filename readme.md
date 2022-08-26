@@ -11,7 +11,7 @@
 - Steam
 
 **ST**
-Using [LukeSmithxyz's](https://github.com/LukeSmithxyz/st) Build until I get everything else patched
+- Currently Patching
 
 **DMenu**
 - Center
