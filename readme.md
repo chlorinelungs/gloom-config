@@ -17,7 +17,8 @@ Using [LukeSmithxyz's](https://github.com/LukeSmithxyz/st) Build until I get eve
 - Center
 - Fuzzy Highlight 
 - Fuzzy Match
- 
+- Border 
+
 **Neofetch**
 Used custom ascii art that will be in the `ascii` folder 
 
