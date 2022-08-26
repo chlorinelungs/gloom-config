@@ -1,5 +1,5 @@
 # Alice's Configs
-### For distro/device hopping
+###### For distro/device hopping
 
 **DWM**
 - Vanity Gaps
