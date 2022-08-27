@@ -138,13 +138,20 @@ unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 
 /*
- * Default shape of cursor
- * 2: Block ("█")
- * 4: Underline ("_")
- * 6: Bar ("|")
- * 7: Snowman ("☃")
+ * https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-SP-q.1D81
+ * Default style of cursor
+ * 0: blinking block
+ * 1: blinking block (default)
+ * 2: steady block ("█")
+ * 3: blinking underline
+ * 4: steady underline ("_")
+ * 5: blinking bar
+ * 6: steady bar ("|")
+ * 7: blinking st cursor
+ * 8: steady st cursor
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorstyle = 1;
+static Rune stcursor = 0x2603; /* snowman ("☃") */
 
 /*
  * Default columns and rows numbers
@@ -173,6 +180,8 @@ static unsigned int defaultattr = 11;
  */
 static uint forcemousemod = ShiftMask;
 
+#include "autocomplete.h"
+
 /*
  * Internal mouse shortcuts.
  * Beware that overloading Button1 will disable the selection.
@@ -190,6 +199,8 @@ static MouseShortcut mshortcuts[] = {
 #define MODKEY Mod1Mask
 #define TERMMOD (ControlMask|ShiftMask)
 
+#define ACMPL_MOD ControlMask|Mod1Mask
+
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
 	{ XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
@@ -204,6 +215,14 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	{ ACMPL_MOD,            XK_slash,       autocomplete,   { .i = ACMPL_WORD        } },
+	{ ACMPL_MOD,            XK_period,      autocomplete,   { .i = ACMPL_FUZZY_WORD  } },
+	{ ACMPL_MOD,            XK_comma,       autocomplete,   { .i = ACMPL_FUZZY       } },
+	{ ACMPL_MOD,            XK_apostrophe,  autocomplete,   { .i = ACMPL_SUFFIX      } },
+	{ ACMPL_MOD,            XK_semicolon,   autocomplete,   { .i = ACMPL_SURROUND    } },
+	{ ACMPL_MOD,            XK_bracketright,autocomplete,   { .i = ACMPL_WWORD       } },
+	{ ACMPL_MOD,            XK_bracketleft, autocomplete,   { .i = ACMPL_FUZZY_WWORD } },
+	{ ACMPL_MOD,            XK_equal,       autocomplete,   { .i = ACMPL_UNDO        } },
 };
 
 /*
