@@ -2,26 +2,27 @@
 ###### For distro/device hopping
 
 **DWM**
-- Vanity Gaps
-- Switch Tools
 - Alpha
 - Always Center
-- Dymanic Swallow
+- Dymamic Swallow
 - Scratchpads
 - Steam
+- Switch Tools
+- Vanity Gaps
 
 **ST**
-- Scrollback
-- Clipboard
 - Any Size
+- Auto Complete
+- Blinking Cursor
 - Bold Is Not Bright
- 
+- Clipboard
+- Scrollback
 
 **DMenu**
+- Border
 - Center
 - Fuzzy Highlight 
-- Fuzzy Match
-- Border 
+- Fuzzy Match 
 
 **Neofetch**
 - Cp the main file from `neofetch` and you should have nice looking ascii art you can modify easier 
