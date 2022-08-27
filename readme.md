@@ -11,7 +11,11 @@
 - Steam
 
 **ST**
-- Currently Patching
+- Scrollback
+- Clipboard
+- Any Size
+- Bold Is Not Bright
+ 
 
 **DMenu**
 - Center
