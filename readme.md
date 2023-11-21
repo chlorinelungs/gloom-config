@@ -1,4 +1,4 @@
-# Alice's Configs
+# GLOOM Configs
 ###### For distro/device hopping
 
 **DWM**
