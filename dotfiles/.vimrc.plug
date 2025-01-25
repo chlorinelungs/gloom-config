@@ -1,0 +1,11 @@
+call plug#begin('~/.vim/plugins')
+
+Plug 'vim-airline/vim-airline'
+Plug 'majutsushi/tagbar'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'valloric/youcompleteme'
+Plug 'sheerun/vim-polyglot'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'dracula/vim'
+
+call plug#end()
