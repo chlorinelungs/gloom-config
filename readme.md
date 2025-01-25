@@ -11,6 +11,7 @@
 - Vanity Gaps
 
 **ST**
+- Alpha
 - Any Size
 - Auto Complete
 - Blinking Cursor
